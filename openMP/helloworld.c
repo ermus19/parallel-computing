@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
   printf("Number of current threads working = %d\n", nthreads);
 
   #pragma omp parallel private(tid)
-    {
+  {
 
       tid = omp_get_thread_num();
       printf("Hello from thread number = %d !\n",tid);
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 
       nthreads = omp_get_num_threads();
       printf("Number of current threads working = %d\n", nthreads);
-    }
+  }
 
   printf("Master thread exitting!\n");
   return 0;
