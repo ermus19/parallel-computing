@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Compiled $1!"
+
+if [ -f "a.out" ]
+then
+  rm a.out
+fi
+
+gcc-6 -o2 -fopenmp $1 -o a.out
+
+if [ -f "a.out" ]
+then
+  ./a.out
+fi
