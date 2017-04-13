@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Compiled $1!"
+
+if [ -f "ejecutable" ]
+then
+  rm ejecutable
+fi
+
+rm pruebaSGE.*
+
+mpicc $1 -o ejecutable
+
+if [ -f "ejecutable" ]
+then
+  qsub ejecuta-.sh
+fi
