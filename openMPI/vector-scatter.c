@@ -23,7 +23,7 @@ int main(int argc, char* argv[]){
 		}
     }
 
-    printf("Proceso %d: VA antes de recibir datos: \n",rank);
+    printf("Proceso %d: VA antes de enviar datos: \n",rank);
 		for (i=0; i<N; i++) {
 			printf("%d  ",VA[i]);
 		}
